@@ -5,6 +5,7 @@ import { SupabaseProvider } from '@/components/providers/SupabaseProvider'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 const syne  = Syne({ subsets: ['latin'], variable: '--font-syne',  display: 'swap' })
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </SupabaseProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
